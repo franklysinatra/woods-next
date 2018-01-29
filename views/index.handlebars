@@ -2,5 +2,9 @@
 <div class="jumbotron text-center">
     <h1 class="display-3">{{title}}</h1>
     <p class="lead">Jot down ideas for your next shop project</p>
-    <a href="/ideas/add" class="btn btn-dark btn-large">Add Project Ideas</a>
+    {{#if user}}    
+        <a href="/ideas/add" class="btn btn-dark btn-large">Add Project Ideas</a>
+    {{else}}
+        <a href="/users/register" class="btn btn-dark btn-large">Get Started</a>
+    {{/if}}
 </div>
