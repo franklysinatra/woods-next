@@ -96,8 +96,6 @@ app.use(function(err, req, res, next) {
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
-  console.log('server started on port ' + port.toString());
+app.listen(port, () =>{
+  console.log(`Server started on port ${port}`);
 });
-
-module.exports = app; 
