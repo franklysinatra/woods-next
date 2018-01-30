@@ -1,5 +1,6 @@
 {{#if ideas}}
     <a href="/ideas/add" class="btn btn-light btn-large btn-block mb-2">Add new project</a>
+{{/if}}
 {{#each ideas}}
     <div class="card card-body mb-2">
         <h1>{{title}}</h4>
@@ -11,6 +12,7 @@
         </form>
     </div>
 {{else}}
+
     <div class="row">
         <div class="col-md-6 mx-auto">
             <div class="text-center">
@@ -20,4 +22,4 @@
         </div>
     </div>
 {{/each}}
-{{/if}}
+
