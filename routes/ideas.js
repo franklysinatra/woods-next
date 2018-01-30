@@ -17,7 +17,8 @@ router.get('/', ensureAuthenticated, function(req, res, next) {
         .then(ideas => {
             res.render('ideas/index', {
                 ideas: ideas,
-                title: 'Ideas' 
+                title: 'Ideas',
+                bgImage: '../images/shavings.png'
             });
         });
 });
@@ -25,7 +26,8 @@ router.get('/', ensureAuthenticated, function(req, res, next) {
 // Add idea form
 router.get('/add', ensureAuthenticated, function(req, res, next) {    
     res.render('ideas/add', {
-        title: 'Ideas'
+        title: 'Ideas',
+        bgImage: '../images/shavings.png'
     });
 });
 
@@ -41,7 +43,8 @@ router.get('/edit/:id', ensureAuthenticated, function(req, res, next) {
             } else {
                 res.render('ideas/edit', {
                     idea: idea,
-                    title: 'Edit'
+                    title: 'Edit',
+                    bgImage: '../images/shavings.png'
                 });
             }
         })

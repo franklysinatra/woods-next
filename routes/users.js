@@ -17,7 +17,8 @@ router.get('/', function(req, res, next) {
 
 router.get('/login', (req, res) => {
   res.render('users/login', {
-    title: 'Login'
+    title: 'Login',
+    bgImage: '../images/tools.png'
   });
 });
 
@@ -30,7 +31,8 @@ router.get('/logout', (req, res) => {
 
 router.get('/register', (req, res) => {
   res.render('users/register', {
-    title: 'Register'
+    title: 'Register',
+    bgImage: '../images/tools.png'
   });
 });
 

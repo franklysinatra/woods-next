@@ -1,10 +1,10 @@
 body {  
   font-family: 'Patrick Hand SC', cursive;
-  background: url(../images/tools.png) no-repeat center center fixed;
+  background: no-repeat center center fixed;
 }
 
 .nav-logo {
-  width: 40px;
+  width: 100px;
 }
 
 .jumbotron {
@@ -13,11 +13,6 @@ body {
   background-position: 0% 25%;
   background-size: cover;
   background-image: url("../images/wn_large.png");
-}
-
-.logo {
-  width: 130px;
-  margin: auto;
 }
 
 a {
