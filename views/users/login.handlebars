@@ -1,17 +1,19 @@
 <div class="row">
     <div class="col-md-6 mx-auto">
         <div class="card card-body">
-            <h3 class="text-center">Account Login</h3>
-            <form action="/users/login" method="post">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <form class="form-signin text-center" action="/users/login" method="post">
+                <img class="mb-3" src="../../images/woodsnext2.png" width="250">
+
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+                
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+                
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
             </form>
+        </div>
     </div>
 </div>
