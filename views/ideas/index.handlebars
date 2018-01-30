@@ -1,3 +1,5 @@
+{{#if ideas}}
+    <a href="/ideas/add" class="btn btn-light btn-large btn-block mb-2">Add new project</a>
 {{#each ideas}}
     <div class="card card-body mb-2">
         <h1>{{title}}</h4>
@@ -18,3 +20,4 @@
         </div>
     </div>
 {{/each}}
+{{/if}}
