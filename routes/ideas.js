@@ -26,7 +26,7 @@ router.get('/', ensureAuthenticated, function(req, res, next) {
 // Add idea form
 router.get('/add', ensureAuthenticated, function(req, res, next) {    
     res.render('ideas/add', {
-        title: 'Ideas',
+        title: 'Add Idea',
         bgImage: '../images/shavings.png'
     });
 });
