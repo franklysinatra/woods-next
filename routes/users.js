@@ -121,9 +121,10 @@ router.put('/settings', ensureAuthenticated, (req, res) => {
   } else {
     User.findOne({email: req.user.email})    
       .then(user => {
-        //Match password
+        // Compare suggested current password to encrypted password in the database
         bcrypt.compare(req.body.currentPassword, user.password, (err, isMatch) => {
           if(err) throw err;
+          // If current password matches the db, encrypt the new password and store in the database
           if(isMatch){
             bcrypt.genSalt(10, (err, salt) => {
               bcrypt.hash(req.body.newPassword,salt,(err, hash) => {
@@ -141,6 +142,7 @@ router.put('/settings', ensureAuthenticated, (req, res) => {
               });
             });
           } else {
+            // Notify user if the current password doesn't match the password in the db.
             req.flash('error_msg', 'Current password does not match');
             res.redirect('/users/settings');
             return;
