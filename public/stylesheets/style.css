@@ -18,6 +18,12 @@ body {
   background-image: url("../images/wn_large.png");
 }
 
+@media  screen and (max-width: 769px) {
+  .jumbotron {
+    background-image: url("../images/wn_med.png");
+  }
+}
+
 a {
   color: #00B7FF;
 }
